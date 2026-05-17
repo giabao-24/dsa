@@ -1,0 +1,46 @@
+BÍ KÍP ĐÁNH GIÁ ĐỘ PHỨC TẠP THUẬT TOÁN (BIG O)
+
+Khái niệm cốt lõi
+Độ phức tạp Big O (ký hiệu: O(...)) dùng để đo lường tốc độ tăng thời gian chạy hoặc số lượng phép toán tối đa mà máy tính phải làm khi kích thước dữ liệu đầu vào (n) ngày càng lớn.
+
+Hai Quy Tắc Vàng (Bắt buộc nhớ)
+
+Quy tắc 1: Bỏ qua hằng số.
+Máy tính chạy quá nhanh nên các hệ số nhân/chia cố định không đáng kể.
+Ví dụ: O(50n) -> O(n), O(n/2) -> O(n), O(9999) -> O(1).
+
+Quy tắc 2: Giữ lại bậc cao nhất.
+Trong một hàm có nhiều phần, phần nào chạy chậm nhất sẽ quyết định toàn bộ.
+Ví dụ: O(n^2) + O(n) + O(1) -> O(n^2).
+Ngoại lệ: Nếu có các biến độc lập (n và m), không được bỏ biến nào: O(n) + O(m^2) -> O(n + m^2).
+
+Bảng xếp hạng độ phức tạp (Từ Nhanh đến Chậm)
+
+O(1) - Hằng số: Nhanh nhất. Gán biến, tính toán cơ bản, truy cập mảng bằng chỉ số arr[i].
+
+O(log n) - Logarit: Rất nhanh. Kích thước bài toán bị chia đôi sau mỗi bước, hoặc bước nhảy nhân đôi (k = k * 2).
+
+O(n) - Tuyến tính: Trung bình. Duyệt mảng 1 lần bằng vòng lặp for hoặc while cơ bản (i++).
+
+O(n log n) - Tuyến tính Logarit: Thường gặp ở các thuật toán sắp xếp tối ưu. Vòng lặp O(n) lồng với vòng lặp O(log n).
+
+O(n^2) - Bình phương: Chậm. Hai vòng lặp n lồng nhau. Lưu ý: Vòng lặp trong chạy từ j = i đến n vẫn là O(n^2).
+
+O(2^n) - Hàm mũ: Rất chậm (Treo máy nếu n lớn). Thường gặp ở đệ quy không nhớ (gọi lại chính nó nhiều lần).
+
+Tuyệt chiêu nhận diện Cạm Bẫy Vòng Lặp
+
+Vòng lặp hằng số: Vòng lặp chạy cố định số lần (VD: for (j = 0; j < 50)) chỉ là O(1). Nếu nó lồng trong vòng lặp n, tổng thể vẫn chỉ là O(n).
+
+Bước nhảy đặc biệt: Đừng luôn mặc định vòng lặp là O(n). Hãy nhìn vào bước nhảy (i++ là tuyến tính, i *= 2 là logarit).
+
+Tuyệt chiêu phân tích Đệ Quy (Lập công thức T(n))
+Để biết độ phức tạp đệ quy, hãy nhìn xem nó gọi lại chính nó Mấy lần và Kích thước dữ liệu Giảm như thế nào:
+
+T(n) = 1 * T(n-1) (Gọi 1 lần, giảm 1): Độ phức tạp là O(n).
+
+T(n) = 2 * T(n-1) (Gọi 2 lần, giảm 1): Độ phức tạp là O(2^n).
+
+T(n) = 1 * T(n/2) (Gọi 1 lần, chia đôi bài toán): Độ phức tạp là O(log n).
+
+T(n) = 2 * T(n/2) (Gọi 2 lần, chia đôi bài toán): Độ phức tạp là O(n).

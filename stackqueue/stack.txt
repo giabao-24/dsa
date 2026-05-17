@@ -1,0 +1,16 @@
+Stack(ngăn xếp) hoạt động theo nguyên tắc LIFO last in first out
+-Giả sử thêm vào 1 - 5
+5
+4
+3
+2
+1
+-Vách ngăn- vậy 5 vào cuối cùng sẽ ra trước tiên
+-Các phương thức :push(thêm vào),pop(lấy phần tử trên cùng),pop() xóa phần tử trên cùng
+
+Queue(hàng đợi hoạt động theo nguyên tắc FIFO first in first out)
+-Giả sử thêm vào Queue 1-5
+1 2 3 4 5
+Vậy 5 vào đầu tiên sẽ ra trước tiên
+-Các phương thức:push(thêm),pop(xóa p tử đầu hàng đợi),
+front(lấy p tử đầu tiên),back(lấy p tử ở cuối,vừa mới xếp vào hàng)
