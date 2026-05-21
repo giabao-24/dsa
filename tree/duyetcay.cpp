@@ -28,7 +28,7 @@ void inOrder(Node* root) {
         inOrder(root->left);           // Sang Trái
         cout << root->data << " ";     // Thăm Gốc
         inOrder(root->right);          // Sang Phải
-    }  
+    }  1223123
 }
 
 // 3. Duyệt Hậu tự (Post-order: L - R - N)

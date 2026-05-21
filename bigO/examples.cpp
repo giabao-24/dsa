@@ -12,7 +12,7 @@ void khoiC(int n, int m) {
             count++;
         }
     } // O(m^2) do T(m) = O(m)*O(m) +  = O(m^2)
-    //tong cong la O(m^2+n) 
+    //tong cong la O(m^2+n)  
 }
 
 void khoiB(int n) {
