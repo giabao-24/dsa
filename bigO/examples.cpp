@@ -19,9 +19,9 @@ void khoiB(int n) {
     int count = 0;
     for (int i = 1; i < n; i = i * 2) { //bước lặp nhân ở lý thuyết là O(logn)
         for (int j = 0; j < n; j++) { // 1 vòng lặp O(n) vậy nhân lại => Khối này O(nlogn)
-            count++;
+            count++; 
         }
-    }
+    } //Inconclusive T(n) = O(logn)*O(n) + O(logn) = O(nlogn)
 }
 
 void khoiA(int n) {
@@ -30,7 +30,7 @@ void khoiA(int n) {
         for (int j = i; j < n; j++) { 
             count++;
         }
-    } //O(n^2)
+    } //Inconclusive T(n) = O(n)*O(n) + O(n) = O(n^2)
 }
 
 //dequi
@@ -39,7 +39,7 @@ long long HamB(int n) {
         return 1;
     }
     long long temp = HamB(n - 1); //ta thây rõ gọi đệ qui 1 vòng vậy O(n)
-    return temp + temp;
+    return temp + temp; //in
 }
 long long HamA(int n) {
     if (n <= 1) {

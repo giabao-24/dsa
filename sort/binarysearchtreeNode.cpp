@@ -22,17 +22,16 @@ bool addNode(Node*&root,int value) {
 }
 void display(Node*root,int value) {
   if(root == nullptr) {cout << "Not found " << value << endl;return;}//cay rong,khong duyet
-    Node*p = root;
     bool check = false;
   //duyet tien thu tu
-  if(p->key == value) {
+  if(root->key == value) {
     cout << "Found " << value;
     return;
   }
-  if(value < p->key) {
-    display(p->left,value);
+  if(value < root->key) {
+    display(root->left,value);
   } else {
-    display(p->right,value);
+    display(root->right,value);
   }
 }
 int main() {
